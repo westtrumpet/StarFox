@@ -1,0 +1,23 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2008
+
+Project("{5952C6A4-1795-111C-1526-1A40EB0557A0}") = "StarFox", "Assembly-CSharp.csproj", "{D74593D4-CFC0-5CA0-8E1D-D2BCB719D7DD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D74593D4-CFC0-5CA0-8E1D-D2BCB719D7DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D74593D4-CFC0-5CA0-8E1D-D2BCB719D7DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D74593D4-CFC0-5CA0-8E1D-D2BCB719D7DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D74593D4-CFC0-5CA0-8E1D-D2BCB719D7DD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal
