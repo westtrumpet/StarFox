@@ -10,15 +10,25 @@ public class PlayerController : MonoBehaviour {
 	public float speed;
 	public float rotateSpeed;
 	//public ParticleSystem particles;
-	GameObject mainCam;
+	static GameObject mainCam;
+	public bool test;
+	public bool mobileTest;
 
 	void Start() {
-		if (SystemInfo.deviceType == DeviceType.Handheld) {
-			Input.gyro.enabled = true;
-			onMobile = true;
-		}
-		else {
-			onMobile = false;
+		if (!test) {
+			if (SystemInfo.deviceType == DeviceType.Handheld) {
+				Input.gyro.enabled = true;
+				onMobile = true;
+			} else {
+				onMobile = false;
+			}
+		} else {
+			if (mobileTest) {
+				Input.gyro.enabled = true;
+				onMobile = true;
+			} else {
+				onMobile = false;
+			}
 		}
 		rigid.velocity = speed * Vector3.forward;
 		//particles.startColor = playerColor;
@@ -30,6 +40,7 @@ public class PlayerController : MonoBehaviour {
 	void Update() {
 		if(onMobile) {
 			player.transform.rotation = Input.gyro.attitude;
+			rigid.velocity = speed * player.transform.forward;
 		}
 		else {
 			float horiz = Input.GetAxis("Horizontal");
